@@ -18,6 +18,7 @@ import { Route, Redirect, Switch, Router } from 'react-router-dom';
 
 import { ConfigProvider } from 'antd';
 import { defaultTheme } from '@ant-design/compatible';
+import { Demo } from "@jaegertracing/plexus/demo/src/index.tsx";
 import NotFound from './NotFound';
 import Page from './Page';
 import DependencyGraph from '../DependencyGraph';
@@ -92,6 +93,9 @@ export default class JaegerUIApp extends Component {
             <Router history={history}>
               <Page>
                 <Switch>
+                  <Route exact path='/demo'>
+                    <Demo />
+                  </Route>
                   <Route path={searchPath}>
                     <SearchTracePage />
                   </Route>
@@ -123,6 +127,7 @@ export default class JaegerUIApp extends Component {
                   <Route exact path={prefixUrl('/')}>
                     <Redirect to={searchPath} />
                   </Route>
+
 
                   <Route>
                     <NotFound />
