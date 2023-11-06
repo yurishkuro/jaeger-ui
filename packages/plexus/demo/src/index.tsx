@@ -209,7 +209,7 @@ export class Demo extends React.PureComponent<{}, TState> {
   render() {
     const { hoveredEdge } = this.state;
     return (
-      <div>
+      <div className="DemoPage">
         <h1>Digraph</h1>
         {renderComparisons(
           {

@@ -27,6 +27,10 @@ html {
   margin-right: 3rem;
 }
 
+.DemoPage {
+  padding: 20px;
+}
+
 .DemoGraph {
   border: 1px solid #bbb;
   cursor: move;
